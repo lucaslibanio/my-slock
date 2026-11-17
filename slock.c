@@ -180,7 +180,8 @@ loadxresources(void)
 		return;
 	for (i = 0; i < LEN(resources); i++) {
 		snprintf(name, sizeof(name), "slock.%s", resources[i].name);
-		if (XrmGetResource(db, name, "*", &type, &val) && val.addr)
+		/* nome e classe iguais: também casa com "*.color0" (pywal) */
+		if (XrmGetResource(db, name, name, &type, &val) && val.addr)
 			*resources[i].dst = strdup(val.addr);
 	}
 	/* não destruímos o db: as strings acima foram copiadas */
