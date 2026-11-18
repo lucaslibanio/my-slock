@@ -22,7 +22,7 @@ static const ResourcePref resources[] = {
 };
 
 /* Textos (renderizados com cairo: aceitam acentos e qualquer fonte instalada) */
-static const char *fontfamily  = "Ubuntu Mono";
+static const char *fontfamily  = "FiraCode Nerd Font";
 static const double clocksize   = 110;
 static const double datesize    = 30;
 static const double messagesize = 24;
@@ -42,7 +42,7 @@ static const unsigned int monitortime = 60;
 
 /* quickcancel: segundos depois de bloquear em que mexer o mouse ou
  * apertar uma tecla cancela o bloqueio sem pedir senha (0 desliga) */
-static const int timetocancel = 3;
+static const int timetocancel = 0;
 
 /* Teclas de mídia que funcionam com a tela bloqueada. Rodam com o seu
  * usuário (não como "nobody"), por isso controle.sh e pactl funcionam. */
